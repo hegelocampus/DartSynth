@@ -1,6 +1,11 @@
 ## DartSynth
 DartSynth is an interactive online analog synthesizer simulator that allows users to create digital sound-scapes with ease
-## Technologies
+### MVP
+- Components that the user can interact with to create sound
+- Effects components that can configure the sound produced by the primary component
+- Keyboard component to allow for intuitive use
+- Components can be attached in different ways, e.g., the order of effects pedals can be manipulated
+### Technologies
 - `Dart`
   - Dart very similar to `JS` so picking it up will be a breeze
   - It also allows for JavaScript interoperability, so if there is anyplace where I am unable to figure out how to write something in Dart I can easily just do so in `JavaScript` and then import it into the main Dart files
