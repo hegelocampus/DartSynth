@@ -22,14 +22,14 @@ class Key {
     if (this.active == false) {
       keyDiv.classes.add('active');
       this.active = true;
-      this.parentDiv.dispatchEvent(CustomEvent("posOn", detail: {
+      this.keyDiv.dispatchEvent(CustomEvent("posOn", detail: {
         "pos": this.seqPos,
         "active": true
       }));
     } else {
       this.active = false;
       keyDiv.classes.remove('active');
-      this.parentDiv.dispatchEvent(CustomEvent("posOff", detail: {
+      this.keyDiv.dispatchEvent(CustomEvent("posOff", detail: {
         "pos": this.seqPos,
         "active": false
       }));

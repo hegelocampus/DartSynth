@@ -32,3 +32,8 @@ div .active {
   background-color: #C472FA;
 }
 
+div .on {
+ background-color: #FEEFED;
+ transition:background-color 0.5s;
+}
+
