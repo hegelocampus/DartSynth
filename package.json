@@ -1,0 +1,16 @@
+{
+  "name": "DartSynth",
+  "version": "1.0.0",
+  "repository": "git@github.com:hegelocampus/DartSynth.git",
+  "author": "Bee <pizzaman8099@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@webpack-cli/init": "^0.3.0",
+    "startaudiocontext": "^1.2.1",
+    "tone": "^13.8.25"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}

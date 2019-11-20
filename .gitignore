@@ -3,6 +3,10 @@
 .packages
 # Remove the following pattern if you wish to check in your lock file
 pubspec.lock
+node_modules
+yarn.lock
+yarn-error.log
+web/bundle.js
 
 # Conventional directory for build outputs
 build/
