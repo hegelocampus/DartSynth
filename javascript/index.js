@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', e => {
     //pattern.push(Tone.Frequency(e.detail.note, 'midi').transpose((0 - i) * 2));
 
     keyb.addEventListener('posOn', e => {
-      let freq = Tone.Frequency(62, 'midi');
+      let freq = Tone.Frequency(e.detail.note, 'midi');
       freq.keyEle = e.target;
       seq.at([e.detail.pos], freq);
     })
