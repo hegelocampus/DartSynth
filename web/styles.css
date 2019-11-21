@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 html, body, #root {
-  background-color: #FA8072;
+  background-color: #DB7064;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -13,15 +13,19 @@ html, body, #root {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  height: 200px;
+  height: 325px;
   width: 60%;
   margin: 60px auto;
+  padding: 10px 10px;
+  background-color: #FA8072;
+  border-radius: 5px;
 }
 
 div[class^="seq-pos-"] {
   flex-grow: 1;
-  border: #72ECFA 1px solid;
-  background-color: #DB7064;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
 }
 
 div[class^="seq-pos-"]:hover {
@@ -29,11 +33,19 @@ div[class^="seq-pos-"]:hover {
 }
 
 div .active {
-  background-color: #C472FA;
+  background-color: #BB6056;
 }
 
 div .on {
- background-color: #FEEFED;
- transition:background-color 0.5s;
+  background-color: #72ECFA;
+  border-size: 0;
+  transition: background-color 0.7s, border-size 0.5s;
+}
+
+div[class^="note-"] {
+  margin: 3px 5px;
+  flex-grow: 1;
+  border: #BB6056 2px solid;
+  border-radius: 5px;
 }
 

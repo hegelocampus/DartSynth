@@ -3,6 +3,7 @@ import startAudioContext from 'startaudiocontext';
 Tone.context.latencyHint = "playback";
 
 const { Transport } = Tone;
+
 const masterCompressor = new Tone.Compressor({
 	"threshold" : -6,
 	"ratio" : 3,
@@ -12,14 +13,7 @@ const masterCompressor = new Tone.Compressor({
 const lowBump = new Tone.Filter(200, "lowshelf");
 Tone.Master.chain(lowBump, masterCompressor);
 const synth = new Tone.Synth().toMaster();
-//synth.voice0.oscillator.type = 'sawtooth2';
-//synth.voice1.oscillator.type = 'fatsine';
-//synth.harmonicity.value = -2;
-//synth.vibratoRate.value = 1;
-//synth.virbatoAmount = 0.5;
 synth.oscillator.type = 'fatsine1';
-//synth.sync();
-//synth.oscillator.type = 'triangle';
 
 const seq = new Tone.Sequence((time, note, i) => {
   if (note != null) {
@@ -57,7 +51,7 @@ window.addEventListener('DOMContentLoaded', e => {
     //pattern.push(Tone.Frequency(e.detail.note, 'midi').transpose((0 - i) * 2));
 
     keyb.addEventListener('posOn', e => {
-      let freq = Tone.Frequency(62, 'midi');
+      let freq = Tone.Frequency(e.detail.note, 'midi');
       freq.keyEle = e.target;
       seq.at([e.detail.pos], freq);
     })
