@@ -35,13 +35,6 @@ seq.loop = true;
 seq.start(0);
 Transport.start();
 
-//new Tone.Loop((time) => {
-//  console.log(seq);
-//  seq.start(0)
-//},
-//  '1m'
-//);
-
 window.addEventListener('DOMContentLoaded', e => {
   startAudioContext(Tone.context, 'buttonElement').then(() => {
     const keyb = document.getElementById('keyb');

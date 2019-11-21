@@ -3,10 +3,11 @@ import 'dart:html';
 class Note {
   bool active = false;
   int seqPos;
+  Function setActiveKey;
   DivElement noteDiv = DivElement();
   num note;
 
-  Note(this.seqPos, this.note) {
+  Note(this.seqPos, this.note, this.setActiveKey) {
     this.noteDiv
       ..classes.add('note-${note}')
       ..classes.add('note-pos-${this.seqPos}')
@@ -15,6 +16,7 @@ class Note {
 
   Function clickHandler(num note, DivElement noteDiv) => (MouseEvent e) {
     if (!this.active) {
+      setActiveKey(this);
       active = true;
       noteDiv
         ..classes.add('active')
@@ -39,21 +41,27 @@ class Note {
 class SeqNode {
   int seqPos;
   List<num> notes = const [69, 72, 74, 76, 79];
-  DivElement activeKey = null;
+  Note activeKey = null;
   DivElement seqDiv = DivElement();
 
   SeqNode(this.seqPos) {
     this.seqDiv
       ..className = 'seq-pos-${this.seqPos.toString()}';
-    this.addNotes();
+    this.notes.forEach((note) => seqDiv
+      ..append(Note(this.seqPos, note, setActiveKey).noteDiv));
+  }
+
+  void setActiveKey(Note newNote) {
+    if (activeKey != null) {
+      activeKey
+        ..noteDiv.classes.remove('active')
+        ..active = false;
+    }
+    activeKey = newNote;
   }
 
   DivElement render() {
     return this.seqDiv;
-  }
-
-  void addNotes() {
-    notes.forEach((note) => seqDiv.append(Note(this.seqPos, note).noteDiv));
   }
 }
 
