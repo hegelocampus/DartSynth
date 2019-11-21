@@ -4,19 +4,20 @@ import './sequence_node.dart';
 
 class Keyboard {
   int octave;
+  List<int> seqPositions = const [0, 1, 2, 3, 4, 5, 6, 7];
   var keyboardDiv = DivElement();
 
-  Keyboard(this.octave);
+  Keyboard(this.octave) {
+    keyboardDiv.id = 'keyb';
+    keyboardDiv.classes.add('sequencer');
+
+    for (var i = 0; i < seqPositions.length; i++) {
+      keyboardDiv.append(SeqNode(seqPositions[i]).render());
+    }
+  }
 
   DivElement renderKeyb() {
-    //this.keyboardDiv.className = 'keyb';
-    this.keyboardDiv.id = 'keyb';
-
-    var seqPositions = [0, 1, 2, 3, 4, 5, 6, 7];
-    for (var i = 0; i < seqPositions.length; i++) {
-      this.keyboardDiv.append(SeqNode(seqPositions[i]).render());
-    }
-    return this.keyboardDiv;
+    return keyboardDiv;
   }
 }
 
