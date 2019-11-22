@@ -40,11 +40,11 @@ class Note {
 
 class SeqNode {
   int seqPos;
-  List<num> notes = const [69, 72, 74, 76, 79];
+  Iterable<int> notes;
   Note activeKey = null;
   DivElement seqDiv = DivElement();
 
-  SeqNode(this.seqPos) {
+  SeqNode(this.seqPos, this.notes) {
     this.seqDiv
       ..className = 'seq-pos-${this.seqPos.toString()}';
     this.notes.forEach((note) => seqDiv

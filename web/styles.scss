@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
+html, body {
+  background-color: #DB7064;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.main-header {
+  word-spacing: 0.15em;
+  margin-bottom: 5px;
+}
+
+.footer {
+  margin: 10px 0 0 0;
+  color: black;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  height: 70%;
+  max-height: 700px;
+  max-width: 700px;
+}
+
+#keyb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px;
+  background-color: #FA8072;
+  border-radius: 5px;
+}
+
+#voice {
+  margin-bottom: 40px;
+}
+
+.sequencer {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 50%;
+}
+
+div[class^="seq-pos-"] {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+}
+
+div .active {
+  background-color: #BB6056;
+}
+
+div[class^="note-"] {
+  z-index: 10;
+  margin: 3px 5px;
+  flex-grow: 1;
+  border: #BB6056 2px solid;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+  &.on {
+    background-color: #72ECFA;
+    border: #72ECFA 2px solid;
+    box-shadow:
+      0px 0px 2px 4px rgba(250, 128, 114, 0.2),
+      0px 0px 4px 4px rgba(202, 248, 253, 0.5);
+    transition:
+      ease-out background-color 0.4s,
+      ease-out border 0.4s,
+      box-shadow 0.7s;
+  }
+}
+
