@@ -1,16 +1,20 @@
 import 'dart:async';
 import 'dart:html' as html;
-import 'package:stagexl/stagexl.dart';
 import 'dart:math';
 import './src/keyboard.dart';
+import './src/bpm_control.dart';
 
 Future<Null> main() async {
   var root = html.querySelector('#root');
 
   var keyboard = Keyboard("voice").renderKeyb();
-  var header = html.HeadingElement.h1()
-    ..innerText = 'Dart Synth'
-    ..classes.add('main-header');
+  var bpmCtrl = BpmControl(keyboard).ele;
+  var header = html.DivElement()
+      ..classes.add('main-header')
+      ..append(html.HeadingElement.h1()
+          ..innerText = 'Dart Synth'
+          )
+      ..append(bpmCtrl);
   var footer = html.AnchorElement()
     ..classes.add('footer')
     ..href =  'https://github.com/hegelocampus/DartSynth'
