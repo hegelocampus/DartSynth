@@ -10,9 +10,37 @@ html, body {
   border: 0;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+ margin: 0;
+}
+
 .main-header {
-  word-spacing: 0.15em;
-  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 25px 0 10px 0;
+  h1 {
+    font-size: 32px;
+    word-spacing: 0.15em;
+    margin: 0 0 0 0;
+  }
+}
+
+.bpm-input-container {
+  input {
+    line-height: 25px;
+    padding: 2px 1px 0 1px;
+    margin: 0 4px 0 0;
+    font-size: 28px;
+    width: 50px;
+    border: none;
+    background-color: inherit;
+    &:focus {
+      outline-color: black;
+      outline: black 1px solid;
+    }
+  }
 }
 
 .footer {

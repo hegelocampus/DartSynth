@@ -1,7 +1,6 @@
 import { Frequency, Sequence, Draw }from 'tone';
 
 export default (uiElement, synth) => {
-  console.log(uiElement);
   const seq = new Sequence((time, note, i) => {
     if (note != null) {
       Draw.schedule(() => {
