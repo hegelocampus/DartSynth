@@ -1,5 +1,8 @@
 ## DartSynth
-DartSynth is an interactive online analog synthesizer simulator that allows users to create digital sound-scapes with ease
+DartSynth is an interactive online analog synthesizer simulator that allows users to create digital sound-scapes with ease  
+  
+[**Link to live site**](https://dartsynth.firebaseapp.com/)
+![Screenshot of webpage](/readme_assets/dartsynth.png)
 ### MVP
 - Vocal range sequencer
 - Bass range sequencer
@@ -13,4 +16,3 @@ DartSynth is an interactive online analog synthesizer simulator that allows user
   - Dart is the language that powers flutter, an increasingly popular mobile app framework created by Google, this will allow for me to effortlessly write a mobile port for my completed application
 - `JavaScript`
   - I setup event listeners for the custom events in my JavaScript audio components. These event listeners adjusted the sequencers based on information sent through the custom events.
-
