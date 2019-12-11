@@ -4,7 +4,6 @@ import './sequence_node.dart';
 class Keyboard {
   String type;
   List<int> basePentatonic = const [9, 12, 14, 16, 19];
-
   List<int> seqPositions = const [0, 1, 2, 3, 4, 5, 6, 7];
   DivElement keyboardDiv = DivElement();
   DivElement voiceDiv = DivElement();
@@ -14,9 +13,11 @@ class Keyboard {
     voiceDiv
       ..classes.add('sequencer')
       ..id = 'voice';
+
     bassDiv
       ..classes.add('sequencer')
       ..id = 'bass';
+
     Iterable<int> bassNotes = parseNotes(0);
     Iterable<int> voiceNotes = parseNotes(5);
 

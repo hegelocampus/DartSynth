@@ -11,7 +11,7 @@ class BpmControl {
     final change = Observable(inputEle.onChange);
 
     inputEle
-        ..max = '420'
+        ..max = '400'
         ..min = '10'
         ..value = current;
     ele
@@ -26,15 +26,14 @@ class BpmControl {
         .where((value) => value.isNotEmpty)
         .debounceTime(const Duration(milliseconds: 200))
         .map((value) => dispatchChange(value))
-    //I'm not sure why this listen needs to be here but it breaks without it
         .listen(null);
   }
 
   Future dispatchChange(String newValue) async {
-    //current = inputEle.valueAsNumber;
     keyboard.dispatchEvent(CustomEvent("changeBpm", detail: {
         "newBpm": newValue
       }
     ));
   }
 }
+
