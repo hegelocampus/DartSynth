@@ -1,4 +1,7 @@
 @import '_reset.scss';
+@import '_modal.scss';
+@import "./font_awesome_icons/fontawesome.scss";
+@import "./font_awesome_icons/brands.scss";
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
 
 html, body {
@@ -11,13 +14,30 @@ html, body {
   border: 0;
 }
 
+#root {
+  display: grid;
+  grid-template: 80px 700px auto / 1fr 3fr 1fr;
+  @media screen and (max-width: 1300px) {
+    display: grid;
+    grid-template-rows: 120px 700px auto;
+  }
+  grid-template-areas:
+    ". header ."
+    "sidebar main ."
+    ". footer .";
+  width: 100%;
+  height: 100%;
+}
+
 .main-header {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 25px 0 10px 0;
   h1 {
     font-size: 32px;
+    font-weight: 800;
     word-spacing: 0.15em;
     margin: 0 0 0 0;
   }
@@ -43,32 +63,67 @@ html, body {
 }
 
 .footer {
-  margin: 10px 0 0 0;
-  color: black;
-  text-decoration: none;
-  align-self: flex-end;
-}
-
-#root {
+  grid-area: footer;
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 80%;
-  height: 70%;
-  max-height: 700px;
-  max-width: 700px;
+  align-items: stretch;
+  width: 100%;
+  height: 4rem;
+  justify-content: flex-end;
+  margin: 5px 0 0 0;
+  color: black;
+  font-size: 16px;
+  line-height: 14px;
+  text-decoration: none;
+  a {
+    align-self: flex-end;
+    text-decoration: none;
+    padding: 12px 4px;
+    margin-left: 8px;
+    height: 3rem;
+    display: block;
+    color: black;
+    &:hover {
+      cursor: pointer;
+    }
+    span {
+      margin: auto;
+      display: block;
+      height: 100%;
+    }
+  }
+  .github-anchor {
+    font-size: 28px;
+    width: 2.22rem;
+    span {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .personal-site-anchor > span {
+    padding-top: 0.5rem;
+  }
 }
 
 #keyb {
+  grid-area: 2 / 2 / 3;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
   width: 100%;
   height: 100%;
-  padding: 10px 10px;
+  max-width: 100%;
+  max-height: 100%;
   background-color: #FA8072;
   border-radius: 5px;
+}
+
+.lead-label, .bass-label {
+  display: block;
+  padding: 5px 0 2px 1.5rem;
+  font-weight: 800;
+  line-height: 18px;
+  font-size: 18px;
 }
 
 #voice {
@@ -76,6 +131,7 @@ html, body {
 }
 
 .sequencer {
+  padding: 8px 10px;
   display: flex;
   justify-content: space-around;
   align-items: stretch;
@@ -98,7 +154,8 @@ div[class^="note-"] {
   margin: 3px 5px;
   flex-grow: 1;
   border: #BB6056 2px solid;
-  border-radius: 5px;
+  border-radius: 6px;
+  min-height: 18px;
   &:hover {
     cursor: pointer;
   }

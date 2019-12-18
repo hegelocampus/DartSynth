@@ -13,19 +13,20 @@ const waitForLoad = async () => {
 }
 
 window.addEventListener('DOMContentLoaded', e => {
-  document.querySelector('#root').addEventListener('click', () => {
-    ToneStart()
+  document.querySelector('#root').addEventListener('modal-close', () => {
+    ToneStart();
+
     const keyb = document.getElementById('root');
+    const voice = keyb.querySelector('#voice');
+    const bass = document.querySelector('#bass');
+
+    connectSequencer(voice, voiceSynth);
+    connectSequencer(bass, bassSynth);
 
     keyb.addEventListener('changeBpm', e => {
       Transport.bpm.rampTo(e.detail.newBpm);
     });
 
-    const voice = keyb.querySelector('#voice');
-    connectSequencer(voice, voiceSynth);
-
-    const bass = document.querySelector('#bass');
-    connectSequencer(bass, bassSynth);
     Transport.start();
   });
 });

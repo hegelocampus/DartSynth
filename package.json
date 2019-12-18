@@ -10,6 +10,7 @@
     "tone": "^13.8.25"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   }

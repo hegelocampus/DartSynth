@@ -28,7 +28,15 @@ class Keyboard {
 
     keyboardDiv
       ..id = 'keyb'
+      ..append(HeadingElement.h4()
+          ..innerText = 'Lead synth'
+          ..classes.add('lead-label')
+      )
       ..append(voiceDiv)
+      ..append(HeadingElement.h4()
+          ..innerText = 'Bass synth'
+          ..classes.add('bass-label')
+      )
       ..append(bassDiv);
   }
 
@@ -36,7 +44,7 @@ class Keyboard {
     return basePentatonic.map((n) => n + (12 * o - 1));
   }
 
-  DivElement renderKeyb() {
+  DivElement get render {
     return keyboardDiv;
   }
 }

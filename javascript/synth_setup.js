@@ -14,7 +14,6 @@ Tone.Master.chain(lowBump, masterCompressor);
 Tone.Master.volume.value = 0.7;
 
 //vocal effects
-
 const delay = new Tone.FeedbackDelay(0.01, 0.01);
 delay.wet.value = 0.01;
 const reverb = new Tone.Reverb(0.001)
