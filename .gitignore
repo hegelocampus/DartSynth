@@ -15,3 +15,7 @@ build/
 
 # Directory created by dartdoc
 doc/api/
+
+# font_awesome scss files
+web/font_awesome_icons/
+
