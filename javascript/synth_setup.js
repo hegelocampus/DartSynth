@@ -23,7 +23,7 @@ const cheby = new Tone.Chebyshev({
   order: 7,
   oversample: 'none'
 }).chain(Tone.Master);
-cheby.wet.value = 0.08;
+cheby.wet.value = 0.02;
 
 //bass effects
 const bitCrush = new Tone.BitCrusher(7);

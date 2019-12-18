@@ -30,6 +30,7 @@ html, body {
 }
 
 .main-header {
+  z-index: 5;
   grid-area: header;
   display: flex;
   justify-content: space-between;
@@ -63,13 +64,14 @@ html, body {
 }
 
 .footer {
+  z-index: 5;
   grid-area: footer;
   display: flex;
   align-items: stretch;
   width: 100%;
   height: 4rem;
   justify-content: flex-end;
-  margin: 5px 0 0 0;
+  margin: 8px 0 0 0;
   color: black;
   font-size: 16px;
   line-height: 14px;
@@ -114,13 +116,17 @@ html, body {
   height: 100%;
   max-width: 100%;
   max-height: 100%;
-  background-color: #FA8072;
-  border-radius: 5px;
+  //background-color: #FA8072;
+  border-radius: 12px;
+  border: 1px solid rgba(222, 126, 115, 0.20);
+  box-shadow:
+    -6px -6px 26px 0 rgba(222, 126, 115, 0.83),
+    6px 6px 16px 0 rgba(197, 100, 90, 0.51);
 }
 
 .lead-label, .bass-label {
   display: block;
-  padding: 5px 0 2px 1.5rem;
+  padding: 10px 0 2px 1.5rem;
   font-weight: 800;
   line-height: 18px;
   font-size: 18px;
@@ -147,6 +153,10 @@ div[class^="seq-pos-"] {
 
 div .active {
   background-color: #BB6056;
+  border: 1px solid rgba(222, 126, 115, 0.20);
+  box-shadow:
+    -6px -6px 26px 0 rgba(222, 126, 115, 0.83),
+    6px 6px 16px 0 rgba(197, 100, 90, 0.51);
 }
 
 div[class^="note-"] {
@@ -163,8 +173,8 @@ div[class^="note-"] {
     background-color: #72ECFA;
     border: #72ECFA 2px solid;
     box-shadow:
-      0px 0px 2px 4px rgba(250, 128, 114, 0.2),
-      0px 0px 4px 4px rgba(202, 248, 253, 0.5);
+      -6px -6px 26px 0 rgba(222, 126, 115, 0.83),
+      6px 6px 16px 0 rgba(197, 100, 90, 0.51);
     transition:
       ease-out background-color 0.4s,
       ease-out border 0.4s,
