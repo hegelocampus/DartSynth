@@ -3,10 +3,10 @@ DartSynth is an interactive online analog synthesizer simulator that allows user
   
 [**Link to live site**](https://dartsynth.firebaseapp.com/)
 ![Screenshot of webpage](/readme_assets/populated.png)
-### MVP
+### Features
 - Vocal range sequencer
 - Bass range sequencer
-- User interface to change the BPM of the sequencers
+- User interface to change the BPM of the sequencers without causing jarring audio transitions
 ### Technologies
 - `tone.js`
   - The `tone.js` library is a fundamental piece of this project, it provides the base synthesizers and timing that is used in this application.
