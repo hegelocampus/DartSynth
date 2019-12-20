@@ -4,8 +4,10 @@
 @import "./font_awesome_icons/brands.scss";
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
 
+$main-color: #DB7064;
+
 html, body {
-  background-color: #DB7064;
+  background-color: $main-color;
   font-family: 'Rubik', sans-serif;
   width: 100%;
   height: 100%;
@@ -118,10 +120,20 @@ html, body {
   max-height: 100%;
   //background-color: #FA8072;
   border-radius: 12px;
-  border: 1px solid rgba(222, 126, 115, 0.20);
+  border: 1px solid rgba(222, 126, 115, 0.83);
+  border: 1px solid scale_color($main-color,
+    $alpha: -80%,
+    $lightness: 45%
+  );
   box-shadow:
-    -6px -6px 26px 0 rgba(222, 126, 115, 0.83),
-    6px 6px 16px 0 rgba(197, 100, 90, 0.51);
+    -6px -6px 26px 0 scale_color($main-color,
+      $alpha: -60%,
+      $lightness: 55%
+    ),
+    6px 6px 16px 0 scale_color($main-color,
+      $alpha: -50%,
+      $lightness: -55%
+    );
 }
 
 .lead-label, .bass-label {
