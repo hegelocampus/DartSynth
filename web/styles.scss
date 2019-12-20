@@ -126,13 +126,13 @@ html, body {
     $lightness: 45%
   );
   box-shadow:
-    -6px -6px 26px 0 scale_color($main-color,
-      $alpha: -60%,
-      $lightness: 55%
+    -6px -6px 16px 0 scale_color($main-color,
+      $alpha: -55%,
+      $lightness: 45%
     ),
     6px 6px 16px 0 scale_color($main-color,
       $alpha: -50%,
-      $lightness: -55%
+      $lightness: -45%
     );
 }
 
