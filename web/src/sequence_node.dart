@@ -15,7 +15,16 @@ class Note {
   }
 
   Function clickHandler(num note, DivElement noteDiv) => (MouseEvent e) {
-    if (!this.active) {
+    if (this.active) {
+      active = false;
+      noteDiv
+        ..classes.remove('active')
+        ..dispatchEvent(CustomEvent("posOff", detail: {
+          "pos": this.seqPos,
+          "note": note,
+          "active": false
+        }));
+    } else {
       setActiveKey(this);
       active = true;
       noteDiv
@@ -24,15 +33,6 @@ class Note {
           "pos": this.seqPos,
           "note": note,
           "active": true
-        }));
-    } else {
-      active = false;
-      noteDiv
-        ..classes.remove('active')
-        ..dispatchEvent(CustomEvent("posOff", detail: {
-          "pos": this.seqPos,
-          "note": note,
-          "active": false
         }));
     }
   };
