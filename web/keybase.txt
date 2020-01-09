@@ -1,0 +1,57 @@
+==================================================================
+https://keybase.io/hegelocampus
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dartsynth.firebaseapp.com
+  * I am hegelocampus (https://keybase.io/hegelocampus) on keybase.
+  * I have a public key ASAiu4Nvv_1wAMSnFeozdq1yR0yjxoTDBx2U7_-_ovf9UAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101e6d6cb1b2db42cf18c278d87b795a9881e3baf9bff7b6c6be4930a682407e58a0a",
+      "host": "keybase.io",
+      "kid": "012022bb836fbffd7000c4a715ea3376ad72474ca3c684c3071d94efffbfa2f7fd500a",
+      "uid": "107b7c2dd81cbc7350d10d593277b819",
+      "username": "hegelocampus"
+    },
+    "merkle_root": {
+      "ctime": 1578611214,
+      "hash": "769b2ea1b367114b21026b423e1ace882c2973557ea75b4ea56f27ce49fb4bac2c2074b94c9b2b8bd02cacafabbaa01ae0c8eb15e6af4de4be130a0cc7681991",
+      "hash_meta": "5a19072b70ac0afdd0a791cf5bf30792a14a6da2eab72d8bd816d1c9fc26758e",
+      "seqno": 14161757
+    },
+    "service": {
+      "entropy": "RzICDyB37uM/pi8RLNbGBhy/",
+      "hostname": "dartsynth.firebaseapp.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.1.1"
+  },
+  "ctime": 1578611229,
+  "expire_in": 504576000,
+  "prev": "54dc8608efc08e8683251dfd7346c244c011a3a414e8fc5ee781d501b0da5d36",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgIruDb7/9cADEpxXqM3atckdMo8aEwwcdlO//v6L3/VAKp3BheWxvYWTESpcCCsQgVNyGCO/AjoaDJR39c0bCRMARo6QU6Pxe54HVAbDaXTbEIH1k/Lr+dsY4esrRL1lyVwUd5yKDl7mclX9WBj7E1JyjAgHCo3NpZ8RAJYPqN0+cF1XymGP229UXQFstuxeyOxTkQO+nOC8XTtqqq+kZCW584sBis3EV0Duw29llzTT9YS6wA5ZlZskoDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIL0GX4AH5lmBs9XreVOGA//I38rf7+SWH+w6BB9QjM1To3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hegelocampus
+
+==================================================================
+
