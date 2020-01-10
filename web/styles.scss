@@ -1,10 +1,10 @@
+@import '_variables.scss';
 @import '_reset.scss';
 @import '_modal.scss';
+@import '_keyboard.scss';
 @import "./font_awesome_icons/fontawesome.scss";
 @import "./font_awesome_icons/brands.scss";
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
-
-$main-color: #DB7064;
 
 html, body {
   background-color: $main-color;
@@ -18,7 +18,7 @@ html, body {
 
 #root {
   display: grid;
-  grid-template: 80px 700px auto / 1fr 3fr 1fr;
+  grid-template: 80px 750px auto / 1fr 3fr 1fr;
   @media screen and (max-width: 1300px) {
     display: grid;
     grid-template-rows: 120px 700px auto;
@@ -105,89 +105,6 @@ html, body {
   }
   .personal-site-anchor > span {
     padding-top: 0.5rem;
-  }
-}
-
-#keyb {
-  grid-area: 2 / 2 / 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: stretch;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  //background-color: #FA8072;
-  border-radius: 12px;
-  border: 1px solid rgba(222, 126, 115, 0.83);
-  border: 1px solid scale_color($main-color,
-    $alpha: -80%,
-    $lightness: 45%
-  );
-  box-shadow:
-    -6px -6px 16px 0 scale_color($main-color,
-      $alpha: -55%,
-      $lightness: 45%
-    ),
-    6px 6px 16px 0 scale_color($main-color,
-      $alpha: -50%,
-      $lightness: -45%
-    );
-}
-
-.lead-label, .bass-label {
-  display: block;
-  padding: 10px 0 2px 1.5rem;
-  font-weight: 800;
-  line-height: 18px;
-  font-size: 18px;
-}
-
-#voice {
-  margin-bottom: 40px;
-}
-
-.sequencer {
-  padding: 8px 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-  height: 50%;
-}
-
-div[class^="seq-pos-"] {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: stretch;
-}
-
-div .active {
-  background-color: #BB6056;
-  border: 1px solid rgba(222, 126, 115, 0.20);
-}
-
-div[class^="note-"] {
-  z-index: 10;
-  margin: 3px 5px;
-  flex-grow: 1;
-  border: #BB6056 2px solid;
-  border-radius: 6px;
-  min-height: 18px;
-  &:hover {
-    cursor: pointer;
-  }
-  &.on {
-    background-color: #72ECFA;
-    border: #72ECFA 2px solid;
-    box-shadow:
-      -6px -6px 26px 0 rgba(222, 126, 115, 0.83),
-      6px 6px 16px 0 rgba(197, 100, 90, 0.51);
-    transition:
-      ease-out background-color 0.4s,
-      ease-out border 0.4s,
-      box-shadow 0.7s;
   }
 }
 
