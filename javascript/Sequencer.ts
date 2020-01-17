@@ -1,6 +1,10 @@
 import { Frequency, Sequence, Draw }from 'tone';
 
-export default (uiElement, synth) => {
+interface Synth {
+  triggerAttackRelease(note: string, length: string, time: any);
+}
+
+export default (uiElement: HTMLElement, synth: Synth) => {
   const seq = new Sequence((time, note) => {
     if (note != null) {
       Draw.schedule(() => {
