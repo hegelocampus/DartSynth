@@ -22,9 +22,9 @@ window.addEventListener('DOMContentLoaded', e => {
   root.addEventListener('modal-close', () => {
     ToneStart();
 
-    const keyb = root.getElementById('keyb');
-    const voice = root.getElementById('voice');
-    const bass = root.getElementById('bass');
+    const keyb = root.querySelector('#keyb');
+    const voice = root.querySelector('#voice');
+    const bass = root.querySelector('#bass');
 
     connectSequencer(voice, voiceSynth);
     connectSequencer(bass, bassSynth);

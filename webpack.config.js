@@ -15,7 +15,8 @@ const config = {
   },
   watch: true,
   output: {
-    filename: './web/bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'web'),
   },
   devtool: "source-map"
 };

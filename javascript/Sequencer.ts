@@ -4,6 +4,10 @@ interface Synth {
   triggerAttackRelease(note: string, length: string, time: any);
 }
 
+interface CustomEvent extends Event {
+  detail: { pos: string, note: string };
+}
+
 export default (uiElement: HTMLElement, synth: Synth) => {
   const seq = new Sequence((time, note) => {
     if (note != null) {
@@ -23,13 +27,13 @@ export default (uiElement: HTMLElement, synth: Synth) => {
   seq.loop = true;
   seq.start(0);
 
-  uiElement.addEventListener('posOn', e => {
+  uiElement.addEventListener('posOn', (e: CustomEvent) => {
     let freq = Frequency(e.detail.note, 'midi');
     freq.keyEle = e.target;
     seq.at([e.detail.pos], freq);
   })
 
-  uiElement.addEventListener('posOff', e => {
+  uiElement.addEventListener('posOff', (e: CustomEvent) => {
     seq.at([e.detail.pos], null);
   })
 }
