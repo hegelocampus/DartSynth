@@ -1,7 +1,7 @@
-import { Transport, context, start as ToneStart }from 'tone';
+import { Transport, context, start as ToneStart } from 'tone';
 import startAudioContext from 'startaudiocontext';
 import connectSequencer from './Sequencer';
-import { bassSynth, voiceSynth } from './synth_setup';
+import { bassSynth, voiceSynth } from './SynthSetup';
 
 
 const waitForLoad = async () => {
@@ -13,18 +13,24 @@ const waitForLoad = async () => {
 }
 
 window.addEventListener('DOMContentLoaded', e => {
-  document.querySelector('#root').addEventListener('modal-close', () => {
+  let root;
+
+  while (!root) {
+    root = document.querySelector('#root');
+  }
+
+  root.addEventListener('modal-close', () => {
     ToneStart();
 
-    const keyb = document.getElementById('root');
-    const voice = keyb.querySelector('#voice');
-    const bass = document.querySelector('#bass');
+    const keyb = root.querySelector('#keyb');
+    const voice = root.querySelector('#voice');
+    const bass = root.querySelector('#bass');
 
     connectSequencer(voice, voiceSynth);
     connectSequencer(bass, bassSynth);
 
     keyb.addEventListener('changeBpm', e => {
-      Transport.bpm.rampTo(e.detail.newBpm);
+      Transport.bpm.rampTo(e!.detail.newBpm);
     });
 
     Transport.start();

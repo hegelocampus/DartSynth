@@ -7,8 +7,11 @@
   "dependencies": {
     "@webpack-cli/init": "^0.3.0",
     "firebase-tools": "^7.11.0",
+    "source-map-loader": "^0.2.4",
     "startaudiocontext": "^1.2.1",
-    "tone": "^13.8.25"
+    "tone": "^13.8.25",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
