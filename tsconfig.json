@@ -9,6 +9,6 @@
     "allowJs": true
   },
   "include": [
-      "./javascript/"
+      "./typescript/"
   ]
 }
