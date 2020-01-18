@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-  entry: './javascript/index.ts',
+  entry: './typescript/index.ts',
   mode: "development",
   resolve: {
     extensions: [".ts", ".js"]
