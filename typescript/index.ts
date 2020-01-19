@@ -3,15 +3,6 @@ import startAudioContext from 'startaudiocontext';
 import connectSequencer from './Sequencer';
 import { bassSynth, voiceSynth } from './SynthSetup';
 
-
-const waitForLoad = async () => {
-  if ((!document.getElementById('voice')) && (!document.getElementById('bass'))) {
-    await window.requestAnimationFrame(waitForLoad);
-  }else {
-    return;
-  }
-}
-
 window.addEventListener('DOMContentLoaded', e => {
   let root;
 
