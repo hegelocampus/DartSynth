@@ -6,7 +6,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "target": "es5",
-    "allowJs": true
+    "allowJs": false,
+    "alwaysStrict": true
   },
   "include": [
       "./typescript/"
