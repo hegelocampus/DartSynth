@@ -2,7 +2,7 @@
 DartSynth is an interactive online analog synthesizer simulator that allows users to create digital sound-scapes with ease  
   
 [**Link to live site**](https://dartsynth.firebaseapp.com/)
-![Screenshot of webpage](/readme_assets/populated.png)
+![Screenshot of webpage](/readme_assets/action_capture.gif)
 ### Features
 - Vocal range sequencer
 - Bass range sequencer
