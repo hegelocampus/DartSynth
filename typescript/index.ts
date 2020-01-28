@@ -1,5 +1,4 @@
 import { Transport, context, start as ToneStart } from 'tone';
-import startAudioContext from 'startaudiocontext';
 import connectSequencer from './Sequencer';
 import { bassSynth, voiceSynth } from './SynthSetup';
 
